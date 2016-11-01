@@ -1,2 +1,2 @@
 # iwdz
-I little board game.
+A little board game.
