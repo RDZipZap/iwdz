@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>
+      Im Wandel der Zeiten üüßß
+    </title>
+    <link rel="stylesheet" type="text/css" href="iwdz.css" />
+    <script src="jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="iwdz.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			function log(text)
+			{
+				console.log(text);
+			}
+
+			$(function()
+			{
+				var game = new Game(['Kevin', 'Hannes'], 'Expert');
+			});
+		</script>
+  </head>
+  <body>
+    <div id="currentstate"></div>
+		<div id="logger"></div>
+		<div id="templates">
+			<div class="player">
+				<div class="name">
+					<div class="key">Spielername:</div><div class="value">-</div>
+				</div>
+				<div class="culturepoints">
+					<div class="key">Kulturpunkte:</div><div class="value">-</div>
+				</div>
+				<div class="cultureinc">
+					<div class="key">Kulturzuwachs:</div><div class="value">-</div>
+				</div>
+				<div class="sciencepoints">
+					<div class="key">Wissenschaftspunkte:</div><div class="value">-</div>
+				</div>
+				<div class="scienceinc">
+					<div class="key">Wissenschaftszuwachs:</div><div class="value">-</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
