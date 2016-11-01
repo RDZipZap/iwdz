@@ -1,0 +1,118 @@
+body {
+	font-family: Verdana;
+	font-size: 11px;
+}
+
+#cardtext {
+	width:350px;
+	height:150px;
+}
+
+.icon {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: bottom;
+	margin: 1px 0px;
+}
+
+.k-bluetool {
+	background: transparent url("../icons/bluepool.png") no-repeat;
+	background-size: 100% auto;
+	border: 0;
+}
+
+.k-bluetool.k-state-hover {
+	background: transparent url("../icons/bluepool.png") no-repeat;
+	background-size:  100% auto;
+}
+
+.k-yellowtool {
+	background: transparent url("../icons/worker.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-yellowtool.k-state-hover {
+	background: transparent url("../icons/worker.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-redtool {
+	background: transparent url("../icons/military.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-redtool.k-state-hover {
+	background: transparent url("../icons/military.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-whitetool {
+	background: transparent url("../icons/civil.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-whitetool.k-state-hover {
+	background: transparent url("../icons/civil.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-armytool {
+	background: transparent url("../icons/army.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-armytool.k-state-hover {
+	background: transparent url("../icons/army.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-culturetool {
+	background: transparent url("../icons/culture.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-culturetool.k-state-hover {
+	background: transparent url("../icons/culture.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-satisfactiontool {
+	background: transparent url("../icons/satisfaction.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-satisfactiontool.k-state-hover {
+	background: transparent url("../icons/satisfaction.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-sciencetool {
+	background: transparent url("../icons/science.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-sciencetool.k-state-hover {
+	background: transparent url("../icons/science.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-foodtool {
+	background: transparent url("../icons/food.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-foodtool.k-state-hover {
+	background: transparent url("../icons/food.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-resourcetool {
+	background: transparent url("../icons/resource.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.k-resourcetool.k-state-hover {
+	background: transparent url("../icons/resource.png") no-repeat;
+	background-size: 100% auto;
+}

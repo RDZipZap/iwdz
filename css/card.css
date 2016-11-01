@@ -1,0 +1,319 @@
+.card {
+	float: left;
+	font-family: Verdana;
+	font-size: 12px;
+	margin: 10px;
+	width: 180px;
+	height: 270px;
+	border: white solid 10px;
+	overflow: hidden;
+	background-color: green;
+	color: white;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+	cursor: pointer;
+}
+
+.top {
+	background-color: #876;
+	color: white;
+	height: 40px;
+	padding: 2px;
+	overflow: hidden;
+}
+
+.top .age {
+	text-align: center;
+	font-size: 2em;
+	position: relative;
+	top: -8px;
+}
+
+.top .category {
+	text-align: right;
+}
+
+.mid {
+	padding: 5px;
+	background-color: #ffe;
+	height: 180px;
+	color: black;
+	padding: 2px;
+	overflow: hidden;
+}
+
+.mid .title {
+	font-size: 1.3em;
+	text-align: center;
+}
+
+
+.bot {
+	background-color: #876;
+	color: white;
+	height: 40px;
+	padding: 2px;
+	overflow: hidden;
+}
+
+.action .top {
+	background-color: #F8D415;
+}
+
+.action .top .category{
+	color: #FFFCE4;
+}
+
+.action .mid {
+	background-color: #FFFCE4;
+}
+
+.action .bot {
+	background-color: #F8D415;
+}
+
+.bonus .top {
+	background-color: #CEC2D1;
+}
+
+.bonus .top .category{
+	color: #461A51;
+}
+
+.bonus .mid {
+	background-color: #461A51;
+	color: white;
+}
+.bonus .mid2 {
+	background-color: #045C59;
+	color: white;
+}
+
+.bonus .bot {
+	background-color: #CEC2D1;
+}
+
+.territory .top {
+	background-color: #D0D5C9;
+}
+
+.territory .top .category {
+	color: #A5AD94;
+}
+
+.territory .mid {
+	background-color: #475F2C;
+	color: white;
+}
+
+.territory .bot {
+	background-color: #D0D5C9;
+}
+
+.aggression .top {
+	background-color: #CDC2B9;
+}
+
+.aggression .top .category {
+	color: #6A5133;
+}
+
+.aggression .mid {
+	background-color: #6A5133;
+	color: white;
+}
+
+.aggression .bot {
+	background-color: #CDC2B9;
+}
+
+.war .top {
+	background-color: #C2C5C7;
+}
+
+.war .top .category {
+	color: #15262D;
+}
+
+.war .mid {
+	background-color: #15262D;
+	color: white;
+}
+
+.war .bot {
+	background-color: #C2C5C7;
+}
+
+.tactic .top {
+	background-color: #C2C5C7;
+}
+
+.tactic .top .category {
+	color: #7D1F22;
+}
+
+.tactic .mid {
+	background-color: #7D1F22;
+	color: white;
+}
+
+.tactic .bot {
+	background-color: #C2C5C7;
+}
+
+.pact .top {
+	background-color: #BCC9DA;
+}
+
+.pact .top .category {
+	color: #073D77;
+}
+
+.pact .mid {
+	background-color: #073D77;
+	color: white;
+}
+
+.pact .bot {
+	background-color: #BCC9DA;
+}
+
+.army .top {
+	background-color: #FD4444;
+}
+
+.army .top .category {
+	color: #FDCFBF;
+}
+
+.army .mid {
+	background-color: #FDCFBF;
+}
+
+.army .bot {
+	background-color: #FD4444;
+}
+
+.special .top {
+	background-color: #368EC9;
+}
+
+.special .top .category {
+	color: #CFE0F1;
+}
+
+.special .mid {
+	background-color: #CFE0F1;
+}
+
+.special .bot {
+	background-color: #368EC9;
+}
+
+.government .top {
+	background-color: #F19C41;
+}
+
+.government .top .category {
+	color: #FDE3CB;
+}
+
+.government .mid {
+	background-color: #FDE3CB;
+}
+
+.government .bot {
+	background-color: #F19C41;
+}
+
+.leader .top {
+	background-color: #69BB4F;
+}
+
+.leader .top .category {
+	color: #FDFEFB;
+}
+
+.leader .mid {
+	background-color: #FDFEFB;
+}
+
+.leader .bot {
+	background-color: #69BB4F;
+}
+
+.wonder .top {
+	background-color: #A06BA9;
+}
+
+.wonder .top .category {
+	color: #ECDFEE;
+}
+
+.wonder .mid {
+	background-color: #ECDFEE;
+}
+
+.wonder .bot {
+	background-color: #A06BA9;
+}
+
+.common .top {
+	background-color: #8F8982;
+}
+
+.common .top .category {
+	color: #E1DEDC;
+}
+
+.common .mid {
+	background-color: #E1DEDC;
+}
+
+.common .bot {
+	background-color: #8F8982;
+}
+
+.k-state-selected
+{
+	border-color: red;
+}
+
+.k-listview:after
+{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.k-listview
+{
+	background-color: #ccc;
+	padding: 0 0 20px 0;
+	min-width: 0;
+}
+
+.row {
+	display: block;
+	margin: 3px;
+	padding: 0px;
+}
+
+.label {
+	display: inline-block;
+	width: 200px;
+	text-align: right;
+	margin: 3px;
+}
+
+.valueinput {
+	display: inline-block;
+	width: 420px;
+	margin: 3px;
+}
+
+.valueinput input {
+	width: 390px;
+}

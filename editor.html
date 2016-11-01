@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>
+      Im Wandel der Zeiten [Editor]
+    </title>
+    <!--<script src="lib/jquery-1.8.2.min.js" type="text/javascript"></script>-->
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="lib/json2.js" type="text/javascript"></script>
+    <script src="lib/kendoui/debug/js/kendo.web.js"></script>
+    <link href="lib/kendoui/debug/styles/kendo.common.css" rel="stylesheet" />
+    <link href="lib/kendoui/debug/styles/kendo.default.css" rel="stylesheet" />
+    <link href="css/card.css" rel="stylesheet" />
+    <link href="css/editor.css" rel="stylesheet" />
+    <link href="css/actioneditor.css" rel="stylesheet" />
+    
+		<script src="js/game.js" type="text/javascript"></script>
+    <script src="js/card.js" type="text/javascript"></script>
+    <script src="js/cards.js" type="text/javascript"></script>
+    <script src="js/editor.js" type="text/javascript"></script>
+    <script src="js/actioneditor.js" type="text/javascript"></script>
+    <script src="js/commandeditor.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function()
+			{
+				initEditor();
+				initActionEditor();
+				initCommandEditor();
+			});
+		</script>
+  </head>
+  <body>
+    <header>
+      <h1>Im Wandel der Zeiten Karteneditor</h1>
+    </header>
+    <div role="main">
+			<div class="k-content">
+				<div class="filters">
+					Typ: <input id="typefilter" />
+					Zeitalter: <input id="agefilter" />
+					Kategorie: <input id="categoryfilter" />
+					Titel: <input id="titlefilter" />
+					<button id="create">Neue Karte</button>
+				</div>
+				<div id="details">
+					<div class="row">
+						<div class="label">Kartentyp:</div><div class="valueinput"><input id="cardtype" value="Card.Type.Civil" /></div>
+					</div>
+					<div class="row">
+						<div class="label">Kategory:</div><div class="valueinput"><input id="cardcategory" value="Card.Category.Farm" /></div>
+					</div>
+					<div class="row">
+						<div class="label">Zeitalter:</div><div class="valueinput"><input id="cardage" value="Game.Age.A" /></div>
+					</div>
+					<div class="row">
+						<div class="label">Kartentitel:</div><div class="valueinput"><input id="cardtitle" value="'Feldarbeit" /></div>
+					</div>
+					<div class="row">
+						<div class="label">Beschreibungstext:</div><div class="valueinput"><textarea id="cardtext" rows="10" cols="30" value=""></textarea></div>
+					</div>
+					<div class="row">
+						<div class="label">Stufe der Karte:</div><div class="valueinput"><input id="cardlevel" value="0" /></div>
+					</div>
+					<div class="row">
+						<div class="label">Spielmodus:</div><div class="valueinput"><input id="cardgamemode" value="Game.Mode.Beginner" /></div>
+					</div>
+					<div class="row">
+						<div class="label">Spieleranzahl:</div><div class="valueinput"><input id="cardplayercount" value="2" /></div>
+					</div>
+					<div class="row">
+						<div class="label">Teil des Startsets:</div><div class="valueinput"><input id="cardstartset" value="true" /></div>
+					</div>
+					<div class="row">
+							Aktion auswählen: <input id="selectaction" /> <button id="addaction">hinzufügen</button>
+							<div class="actions" id="actions"></div>
+					</div>
+					<div class="row">
+						<button id="savedetails">Speichern</button>
+					</div>
+				</div>
+				<div id="commandeditor">
+					<div class="commanddetails">
+					gjhgkjh jhg jkhg jhg jhg h kjh kjhg 
+						<table><thead>
+							<tr><td>Befehl: </td><td><input id="selectcommand" /></td></tr>
+						</thead>
+						<tbody id="param-container">
+						</tbody></table>
+						<button id="savecommanddetails">Speichern</button>
+					</div>
+				</div>
+				<div id="listView"></div>
+				<script type="text/x-kendo-tmpl" id="card-view">
+				# if (Category == Card.Category.Mine){#
+					<div class="card common">
+				#}else if (Category == Card.Category.Farm){#
+					<div class="card common">
+				#}else if (Category == Card.Category.CommonBuilding){#
+					<div class="card common">
+				#}else if (Category == Card.Category.Temple){#
+					<div class="card common">
+				#}else if (Category == Card.Category.Theater){#
+					<div class="card common">
+				#}else if (Category == Card.Category.Arena){#
+					<div class="card common">
+				#}else if (Category == Card.Category.Laboratory){#
+					<div class="card common">
+				#}else if (Category == Card.Category.Action){#
+					<div class="card action">
+				#}else if (Category == Card.Category.Leader){#
+					<div class="card leader">
+				#}else if (Category == Card.Category.Wonder){#
+					<div class="card wonder">
+				#}else if (Category == Card.Category.Government){#
+					<div class="card government">
+				#}else if (Category == Card.Category.Infantry){#
+					<div class="card army">
+				#}else if (Category == Card.Category.Cavallery){#
+					<div class="card army">
+				#}else if (Category == Card.Category.Artillery){#
+					<div class="card army">
+				#}else if (Category == Card.Category.Airstrike){#
+					<div class="card army">
+				#}else if (Category == Card.Category.Tactic){#
+					<div class="card tactic">
+				#}else if (Category == Card.Category.Special){#
+					<div class="card special">
+				#}else if (Category == Card.Category.Bonus){#
+					<div class="card bonus">
+				#}else if (Category == Card.Category.War){#
+					<div class="card war">
+				#}else if (Category == Card.Category.Aggression){#
+					<div class="card aggression">
+				#}else if (Category == Card.Category.Pact){#
+					<div class="card pact">
+				#}else if (Category == Card.Category.Territory){#
+					<div class="card territory">
+				#}else if (Category == Card.Category.Event){#
+					<div class="card territory">
+				#}#
+						<div class="top">
+							<div class="category">${Category}</div>
+							<div class="age">${Age}</div>
+						</div>
+						<div class="mid">
+							<div class="title">${Title}</div>
+						</div>
+						<div class="bot">
+							smile
+						</div>
+					</div>
+				</script>
+
+				<script type="text/x-kendo-tmpl" id="action-view">
+					<div class="action">
+						<div class="head">
+							<div class="name">${actionname}</div>
+							<div class="operations">
+								<a class="k-button" href="javascript:void(0)" onclick="onDeleteAction('${actionname}')">
+								<span class="k-icon k-i-close"></span></a>
+							</div>
+						</div>
+						<div class="commandlist"></div>
+					</div>
+				</script>
+				
+				<script type="text/x-kendo-tmpl" id="command-view">
+					<div class="commandline">
+						<div class="command">
+							${HumanReadable}
+						</div>
+						<div class="operations">
+							<a class="k-button" href="javascript:void(0)" onclick="onEditCommand('${actionname}', ${index})">
+							<span class="k-icon k-i-pencil"></span></a>
+							<a class="k-button" href="javascript:void(0)" onclick="onDeleteCommand('${actionname}', ${index})">
+							<span class="k-icon k-i-close"></span></a>
+						</div>
+					</div>
+				</script>
+
+				<script type="text/x-kendo-tmpl" id="command-add">
+					<div class="commandline">
+						<div class="command">Neuen Befehl hinzufügen</div>
+						<div class="operations">
+							<a class="k-button" href="javascript:void(0)" onclick="onAddCommand('${actionname}')">
+							<span class="k-icon k-i-plus"></span></a>
+						</div>
+					</div>
+				</script>
+
+				<script type="text/x-kendo-tmpl" id="command-params-move">
+						<tr><td>Menge: </td><td>
+						<input data-role="numerictextbox" decimals="0"
+									data-bind="value: data.Amount" /></td></tr>
+						<tr><td>von: </td><td>
+						<input data-role="dropdownlist"
+									data-text-field="text" 
+									data-value-field="value"
+									data-bind="source: fields, value: data.Source" /></td></tr>
+						<tr><td>nach: </td><td>
+						<input data-role="dropdownlist"
+									data-text-field="text" 
+									data-value-field="value"
+									data-bind="source: fields, value: data.Target" /></td></tr>
+				</script>
+				<script type="text/x-kendo-tmpl" id="display-params-move">
+						Verschiebe ${Amount} von ${Source} nach ${Target}.
+				</script>
+
+				<script type="text/x-kendo-tmpl" id="command-params-add">
+						<tr><td>Menge: </td><td>
+						<input data-role="numerictextbox"
+									data-bind="value: data.Amount" /></td></tr>
+						<tr><td>zu: </td><td>
+						<input data-role="dropdownlist"
+									data-text-field="text" 
+									data-value-field="value"
+									data-bind="source: fields, value: data.Target" /></td></tr>
+				</script>
+				<script type="text/x-kendo-tmpl" id="display-params-add">
+						Addiere ${Amount} zu ${Target}.
+				</script>
+
+			</div>
+    </div>
+    <footer>
+			<a href="iwdz.html">zurück</a>
+    </footer>
+	</body>
+</html>

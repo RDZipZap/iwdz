@@ -1,0 +1,60 @@
+.actions {
+	font-size: 10px;
+	font-family: verdana;
+	width: 700px;
+	height: 350px;
+	overflow: scroll;
+}
+.actions .action {
+	background-color: grey;
+	color: white;
+	margin: 2px;
+	padding: 2px;
+}
+
+.actions .action .head {
+	width: 670px;
+}
+
+.actions .action .head .name {
+	width: 610px;
+	display: inline-block;
+}
+
+.actions .action .head .operations {
+	text-align: right;
+	display: inline-block;
+}
+
+.actions .action .commandlist {
+	background-color: #f8f8f8;
+	color: black;
+}
+
+.actions .action .commandlist .commandline {
+	width: 670px;
+}
+
+.actions .action .commandlist .commandline .command {
+	width: 580px;
+	display: inline-block;
+}
+
+.actions .action .commandlist .commandline .command .name {
+	width: 50px;
+	text-align: right;
+	display: inline-block;
+}
+
+.actions .action .commandlist .commandline .command .value {
+	width: 450px;
+	overflow:hidden;
+	display: inline-block;
+}
+
+.actions .action .commandlist .commandline .operations {
+	width: 80px;
+	text-align: right;
+	display: inline-block;
+}
+

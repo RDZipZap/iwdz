@@ -1,48 +1,35 @@
-body{ font: 62.5% "Trebuchet MS", sans-serif; margin: 50px;}
+body {
+	font-family: Verdana;
+	font-size: 10px;
+	background-color: black;
+	color: white;
+	margin: 0px;
+	padding: 0px;
+}
 
-form { font-family: Verdana; }
-.formbody { border: 1px solid lightgray; width: 100%; overflow: hidden; }
-.formbody li { list-style: none outside none; }
-.attributeblock { display: block; margin: 10px; }
-.attributelabel { width: 170px; display: inline-block; text-align: right; padding-right: 10px; vertical-align: top; font-size: 1.4em; }
-.attributevalue { width: 350px; display: inline-block; }
-.attributedesc { display: block; font-size: xx-small;}
+#templates {
+	display: none;
+}
 
-.sidebar { background-color: #BBBBBB; border-left: 1px solid gray; display: block; }
-.main { background-color: #DDDDDD; float: left; width: 768px }
-.clear { clear: both; }
-.footer { font-size: xx-small; }
+#currentstate {
+	border: 1px solid grey;
+}
 
-.menubutton { margin: 5px 5px; width: 190px; }
-.section-header { font-size: 20px; font-weight: bold; color: blue; }
+#logger {
+	border: 1px solid grey;
+	white-space: pre;
+}
 
-.kartenauslage { width: 766; min-height: 135px; }
-.kartenblock { width: 100%; min-height: 135px; border: 1px gray dashed; }
-.auslage-slot { display: inline-block; }
-.center-cards { text-align: center; }
-.auslage-karte { width: 90px; height: 135px; border: 1px gray solid; }
-.auslage-preis { width: 90px; height: 20px; text-align: center; }
-.anfuehrer { width: 40px; height: 40px; border: 1px gray dashed; float: right; display: inline-block; font-size: xx-small; }
+.player {
+	margin: 5px;
+}
 
-.previewblock { margin: 10px; display: inline-block; }
-.preview { height: 100px; min-width: 40px; }
-.previewlabel { height: 12px; width: 66px; overflow: hidden; }
-.previewid { height: 12px; width: 66px; overflow: hidden; }
+.key {
+	display: inline-block;
+	width: 200px;
+	color: light-grey;
+}
 
-.infobar { font-size: 20px; }
-.playername { font-weight: bolder; width: 60px; overflow: hidden; }
-.infobar-entry-width {  }
-.zivil { background-image:url('../img/Zivil.png'); background-position: left; background-repeat: no-repeat; padding-left: 25px; }
-.militaer { background-image:url('../img/Militaer.png'); background-position: left; background-repeat: no-repeat; padding-left: 25px; }
-.rohstoff { background-image:url('../img/Rohstoff.png'); background-position: left; background-repeat: no-repeat; padding-left: 25px; }
-.kultur { background-image:url('../img/Kultur.png'); background-position: left; background-repeat: no-repeat; padding-left: 20px; }
-.nahrung { background-image:url('../img/Nahrung.png'); background-position: left; background-repeat: no-repeat; padding-left: 20px; }
-.armee { background-image:url('../img/Armee.png'); background-position: left; background-repeat: no-repeat; padding-left: 20px; }
-.wissenschaft { background-image:url('../img/Wissenschaft.png'); background-position: left; background-repeat: no-repeat; padding-left: 20px; }
-.blauervorrat { background-image:url('../img/BlauerVorrat.png'); background-position: left; background-repeat: no-repeat; padding-left: 20px; }
-.blauervorrat1 { background-image:url('../img/BlauerVorrat1.png'); background-position: left; background-repeat: no-repeat; padding-left: 20px; }
-.blauervorrat2 { background-image:url('../img/BlauerVorrat2.png'); background-position: left; background-repeat: no-repeat; padding-left: 20px; }
-.blauervorrat3 { background-image:url('../img/BlauerVorrat3.png'); background-position: left; background-repeat: no-repeat; padding-left: 20px; }
-.arbeiter {  background-image:url('../img/Arbeiter.png'); background-position: left; background-repeat: no-repeat; padding-left: 20px; }
-.zufriedenheit {  background-image:url('../img/Smiley.png'); background-position: left; background-repeat: no-repeat; padding-left: 20px; }
-
+.value {
+	display: inline-block;
+}
